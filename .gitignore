@@ -1,2 +1,5 @@
 exoplanet_env/
 __pycache__/
+data/raw/
+data/processed/*.npy
+data/metadata/cumulative.csv
