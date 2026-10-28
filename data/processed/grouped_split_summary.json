@@ -1,0 +1,55 @@
+{
+  "method": "stratified unique-star three-stage split",
+  "unit_of_separation": "kepid",
+  "seed": 42,
+  "intended_fraction_by_star": {
+    "train": 0.6,
+    "val": 0.15,
+    "cal": 0.1,
+    "test": 0.15
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1"
+  },
+  "sha256_inputs": {
+    "X.npy": "58af518fe3b788e4494f8ba60133fecc69ce361fdbb6a8fce9feb9da8ad6f922",
+    "y.npy": "5a7d4cd588240f66ac37e8f024eea9ae206e16630baa447e0523d045be3c648b",
+    "processed_metadata.csv": "25040dd8b8ab9ad1ee0d6384fe248c31d2fe875bc809c306618605d2ee5620d0"
+  },
+  "splits": {
+    "train": {
+      "examples": 116,
+      "distinct_stars": 115,
+      "class_counts": {
+        "0": 57,
+        "1": 59
+      }
+    },
+    "val": {
+      "examples": 28,
+      "distinct_stars": 28,
+      "class_counts": {
+        "0": 14,
+        "1": 14
+      }
+    },
+    "cal": {
+      "examples": 20,
+      "distinct_stars": 19,
+      "class_counts": {
+        "0": 10,
+        "1": 10
+      }
+    },
+    "test": {
+      "examples": 32,
+      "distinct_stars": 30,
+      "class_counts": {
+        "0": 15,
+        "1": 17
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "baseline": {
+      "accuracy": 0.6875,
+      "precision": 0.6666666666666666,
+      "recall": 0.8235294117647058,
+      "f1": 0.7368421052631579,
+      "false_positive_rate": 0.4666666666666667,
+      "tn": 8,
+      "fp": 7,
+      "fn": 3,
+      "tp": 14
+    },
+    "conformal": {
+      "coverage": 0.96875,
+      "abstention_rate": 0.75,
+      "mean_set_size": 1.75,
+      "singleton_count": 8,
+      "empty_count": 0,
+      "ambiguous_count": 24,
+      "singleton_accuracy": 0.875,
+      "false_positive_count": 0,
+      "false_positive_rate_all_negatives": 0.0,
+      "false_positive_rate_decided_negatives": 0.0
+    },
+    "alpha": 0.05,
+    "target_coverage": 0.95,
+    "threshold": 0.8607943207025528,
+    "threshold_is_infinite": false,
+    "quantile_rank": 20,
+    "n_calibration": 20,
+    "n_test": 32,
+    "baseline_threshold": 0.5
+  },
+  {
+    "baseline": {
+      "accuracy": 0.6875,
+      "precision": 0.6666666666666666,
+      "recall": 0.8235294117647058,
+      "f1": 0.7368421052631579,
+      "false_positive_rate": 0.4666666666666667,
+      "tn": 8,
+      "fp": 7,
+      "fn": 3,
+      "tp": 14
+    },
+    "conformal": {
+      "coverage": 0.84375,
+      "abstention_rate": 0.3125,
+      "mean_set_size": 1.3125,
+      "singleton_count": 22,
+      "empty_count": 0,
+      "ambiguous_count": 10,
+      "singleton_accuracy": 0.7727272727272727,
+      "false_positive_count": 3,
+      "false_positive_rate_all_negatives": 0.2,
+      "false_positive_rate_decided_negatives": 0.3
+    },
+    "alpha": 0.1,
+    "target_coverage": 0.9,
+    "threshold": 0.6210911273956299,
+    "threshold_is_infinite": false,
+    "quantile_rank": 19,
+    "n_calibration": 20,
+    "n_test": 32,
+    "baseline_threshold": 0.5
+  },
+  {
+    "baseline": {
+      "accuracy": 0.6875,
+      "precision": 0.6666666666666666,
+      "recall": 0.8235294117647058,
+      "f1": 0.7368421052631579,
+      "false_positive_rate": 0.4666666666666667,
+      "tn": 8,
+      "fp": 7,
+      "fn": 3,
+      "tp": 14
+    },
+    "conformal": {
+      "coverage": 0.625,
+      "abstention_rate": 0.1875,
+      "mean_set_size": 0.8125,
+      "singleton_count": 26,
+      "empty_count": 6,
+      "ambiguous_count": 0,
+      "singleton_accuracy": 0.7692307692307693,
+      "false_positive_count": 3,
+      "false_positive_rate_all_negatives": 0.2,
+      "false_positive_rate_decided_negatives": 0.3
+    },
+    "alpha": 0.2,
+    "target_coverage": 0.8,
+    "threshold": 0.45790576934814453,
+    "threshold_is_infinite": false,
+    "quantile_rank": 17,
+    "n_calibration": 20,
+    "n_test": 32,
+    "baseline_threshold": 0.5
+  }
+]

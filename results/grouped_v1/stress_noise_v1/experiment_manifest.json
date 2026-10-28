@@ -1,0 +1,46 @@
+{
+  "description": "Gaussian perturbations added AFTER Kepler preprocessing and per-curve normalization",
+  "interpretation": "Synthetic input-noise stress; NOT physically calibrated Kepler noise or stellar flares",
+  "experiment": "grouped_v1",
+  "n_calibration": 20,
+  "n_test": 32,
+  "test_labels": {
+    "0": 15,
+    "1": 17
+  },
+  "noise_levels": {
+    "clean": 0.0,
+    "low": 0.1,
+    "medium": 0.25,
+    "high": 0.5
+  },
+  "trials_per_noise_level": 10,
+  "seed_rule": "numpy default_rng(seed + trial), same base noise z scaled across noise levels",
+  "seed": 20261028,
+  "baseline_threshold": 0.5,
+  "alphas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "conformal_score_thresholds": {
+    "0.05": 0.8607943207025528,
+    "0.1": 0.6210911273956299,
+    "0.2": 0.45790576934814453
+  },
+  "calibration": "calibration predictions from clean, unperturbed X_cal; fixed for all test conditions",
+  "selection": "all sigma levels predefined; do not tune to test outcomes",
+  "repeated_trials": "Same 32 test candidates are reused; repeated noise realizations are not independent test cases",
+  "fpr_all_negatives_denominator": "all 15 negatives, including abstained negatives",
+  "fpr_decided_negatives_denominator": "only negatively labeled candidates receiving a singleton decision",
+  "file_sha256": {
+    "results\\grouped_v1\\baseline\\baseline_cnn.pt": "9436ace79015186c9b8b9c3996b92fc455b9714fe19f3863127685eb434725fe",
+    "data\\processed\\X_cal.npy": "478e1787067b4823a831884352f68ae874576cd18cd873c3bcd3568adcc1577e",
+    "data\\processed\\y_cal.npy": "11f6bf2dcb81752fc23ab8662c2cb97051477e40a8cf5857bfe4a6d7840f2f59",
+    "data\\processed\\X_test.npy": "5e64e89d4c4c34ffd85f86809a865ced0c7d6d70058687a948cd893026e38c96",
+    "data\\processed\\y_test.npy": "2e793d84a4129a8573e3d00043a306f7d5cc88198e589d9c09585bb3f60d1f80",
+    "results\\grouped_v1\\baseline\\test_predictions.csv": "0df110bb1b4699733e9c3185319bd34216a3a3734a9842e78c82569038ab44e8",
+    "results\\grouped_v1\\conformal\\metrics.json": "cdcc8049d24e1f343005120a4aaf2efb9c8f93ef4c69d008ab0999a3d8ce6281",
+    "data\\processed\\grouped_split_manifest.csv": "dcfad15ab0ae2ca2fd7ae564fcb3112954f427f6b46354ce881180858eab8bf3"
+  }
+}
