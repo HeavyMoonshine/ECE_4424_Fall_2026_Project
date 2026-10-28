@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+ non_transit       0.83      0.67      0.74        15
+     transit       0.72      0.87      0.79        15
+
+    accuracy                           0.77        30
+   macro avg       0.78      0.77      0.76        30
+weighted avg       0.78      0.77      0.76        30

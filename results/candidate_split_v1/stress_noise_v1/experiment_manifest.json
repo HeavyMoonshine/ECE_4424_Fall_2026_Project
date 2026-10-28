@@ -1,0 +1,47 @@
+{
+  "description": "Gaussian perturbations added AFTER Kepler preprocessing and per-curve normalization",
+  "interpretation": "Synthetic input-noise stress; NOT physically calibrated Kepler noise or stellar flares",
+  "experiment": "candidate_split_v1",
+  "n_calibration": 20,
+  "n_test": 30,
+  "test_labels": {
+    "0": 15,
+    "1": 15
+  },
+  "noise_levels": {
+    "clean": 0.0,
+    "low": 0.1,
+    "medium": 0.25,
+    "high": 0.5
+  },
+  "trials_per_noise_level": 10,
+  "seed_rule": "numpy default_rng(seed + trial), same base noise z scaled across noise levels",
+  "seed": 20261028,
+  "baseline_threshold": 0.5,
+  "alphas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "conformal_score_thresholds": {
+    "0.05": 0.6523171663284302,
+    "0.1": 0.4433569610118866,
+    "0.2": 0.42667853832244873
+  },
+  "calibration": "calibration predictions from clean, unperturbed X_cal; fixed for all test conditions",
+  "selection": "all sigma levels predefined; do not tune to test outcomes",
+  "split_caveat": "Candidate-level split: KIC 10982872 appears in both calibration and test. Exchangeability concerns; do not interpret as guaranteed population coverage.",
+  "repeated_trials": "Same 30 test candidates are reused; repeated noise realizations are not independent test cases",
+  "fpr_all_negatives_denominator": "all 15 negatives, including abstained negatives",
+  "fpr_decided_negatives_denominator": "only negatively labeled candidates receiving a singleton decision",
+  "file_sha256": {
+    "results\\candidate_split_v1\\baseline\\baseline_cnn.pt": "c05b25e4b6704778a7924d751b15d85dd723c7fcedf73956557ba8031ab5899d",
+    "results\\candidate_split_v1\\dataset_snapshot\\X_cal.npy": "0310ca6740e3fc3531770dbf71507a239a81aae3dea2d324597662e8294b3a31",
+    "results\\candidate_split_v1\\dataset_snapshot\\y_cal.npy": "3852eefc2ff0dc9e8fc33cf5fb40867983ae4c28eb422d06c54bcb7c789cad70",
+    "results\\candidate_split_v1\\dataset_snapshot\\X_test.npy": "334e3566f13f5ee0d1f6ffcf4f9a1f6f2b99806c5ffb8e38717e82cc274d993f",
+    "results\\candidate_split_v1\\dataset_snapshot\\y_test.npy": "a38f0af35bd918c51e6885d83a868baaf57a3541405c1b7a37eac8274f886320",
+    "results\\candidate_split_v1\\baseline\\test_predictions.csv": "0acea942540cd82c785ee734ad28f8bd2cca1687fe5bc6294ebaf86f06130dc6",
+    "results\\candidate_split_v1\\conformal\\metrics.json": "99f06c10dfb517894f593df1640a3f6e4cbd7d539fdb1ee5f1152f296dd8088a",
+    "results\\candidate_split_v1\\dataset_snapshot\\candidate_split_manifest.csv": "b15c5e8bbaad947a7b5e2de5f93e7689d29ec877b96dee2187f682990bf2e3ec"
+  }
+}
