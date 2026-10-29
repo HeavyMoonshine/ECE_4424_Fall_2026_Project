@@ -1,0 +1,76 @@
+{
+  "description": "Gaussian perturbations added AFTER Kepler preprocessing and per-curve normalization",
+  "interpretation": "Synthetic input-noise stress; NOT physically calibrated Kepler noise or stellar flares",
+  "experiment": "original_v1_reproduced",
+  "n_calibration": 20,
+  "n_test": 30,
+  "historical_comparison": {
+    "0.05": {
+      "historical_threshold": 0.7872121930122375,
+      "reproduced_threshold": 0.7865262031555176,
+      "historical_singleton_count": 11,
+      "reproduced_singleton_count": 11,
+      "historical_coverage": 0.9666666666666667,
+      "reproduced_coverage": 0.9666666666666667
+    },
+    "0.1": {
+      "historical_threshold": 0.692665696144104,
+      "reproduced_threshold": 0.688296377658844,
+      "historical_singleton_count": 17,
+      "reproduced_singleton_count": 18,
+      "historical_coverage": 0.9,
+      "reproduced_coverage": 0.9
+    },
+    "0.2": {
+      "historical_threshold": 0.5070422291755676,
+      "reproduced_threshold": 0.5049344897270203,
+      "historical_singleton_count": 30,
+      "reproduced_singleton_count": 30,
+      "historical_coverage": 0.8,
+      "reproduced_coverage": 0.8
+    }
+  },
+  "test_labels": {
+    "0": 15,
+    "1": 15
+  },
+  "noise_levels": {
+    "clean": 0.0,
+    "low": 0.1,
+    "medium": 0.25,
+    "high": 0.5
+  },
+  "trials_per_noise_level": 10,
+  "seed_rule": "numpy default_rng(seed + trial), same base noise z scaled across noise levels",
+  "seed": 20261028,
+  "baseline_threshold": 0.5,
+  "alphas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "conformal_score_thresholds": {
+    "0.05": 0.7865262031555176,
+    "0.1": 0.688296377658844,
+    "0.2": 0.5049344897270203
+  },
+  "calibration": "calibration predictions from clean, unperturbed X_cal; fixed for all test conditions",
+  "selection": "all sigma levels predefined; do not tune to test outcomes",
+  "repeated_trials": "Same 30 test candidates are reused; repeated noise realizations are not independent test cases",
+  "fpr_all_negatives_denominator": "all 15 negatives, including abstained negatives",
+  "fpr_decided_negatives_denominator": "only negatively labeled candidates receiving a singleton decision",
+  "file_sha256": {
+    "results\\baseline\\baseline_cnn.pt": "a5808336f7687a4a8d549f2971d4b229ceb11958d37b19607c4d26d6bd47233a",
+    "results\\original_v1\\dataset_snapshot\\X_cal.npy": "3f763c38cac5bfedcda6610f8b8d614ade43cf033c592fc22f1ef8bc0c2f428d",
+    "results\\original_v1\\dataset_snapshot\\y_cal.npy": "3852eefc2ff0dc9e8fc33cf5fb40867983ae4c28eb422d06c54bcb7c789cad70",
+    "results\\original_v1\\dataset_snapshot\\X_test.npy": "7403f17a6da717a777b577da690a9aa49f1918860b7f31810f827834b6dff768",
+    "results\\original_v1\\dataset_snapshot\\y_test.npy": "a38f0af35bd918c51e6885d83a868baaf57a3541405c1b7a37eac8274f886320",
+    "results\\baseline\\test_predictions.csv": "ffe0553042620612c51be0b59bfced43550df57fd13b41f3f30739ce5fae6d09",
+    "results\\conformal\\metrics.json": "f09ce334c82f2f5f9f1cce859dbcc2df0ee96992b7d45baa5fceb61475018ee3",
+    "results\\conformal\\calibration_scores.csv": "df65a8a978c0fd4beefde4ac6c1692d461559c3255f14ab78f2e63e0cbde32fb",
+    "results\\original_v1\\baseline\\metrics.json": "8c5ede451b7a9a00a352f4fef478214a5b5481784d549a50196862470a5d4ac9",
+    "results\\original_v1\\baseline\\test_predictions.csv": "ffe0553042620612c51be0b59bfced43550df57fd13b41f3f30739ce5fae6d09",
+    "results\\original_v1\\conformal\\metrics.json": "1c091e242a4e67553a375918a5e46ae254ee6e33269bb312b619c67def51b947",
+    "results\\original_v1\\conformal\\calibration_scores.csv": "c4c2298b277891e231cedf9a0880a0bd92fa9786fa3652c8a0ba190d3333fe1e"
+  }
+}
